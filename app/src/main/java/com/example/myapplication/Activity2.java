@@ -70,7 +70,28 @@ public class Activity2 extends AppCompatActivity {
             }
 
 
+
+
+
+
         } )  ;
+
+        Button cancelbtn = findViewById(R.id.cancel);
+
+        cancelbtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                System.out.println("Button Clicked");
+
+                Intent MainActivityIntent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(MainActivityIntent);
+
+            }
+        });
+
+
+
+
+
     }
 
     private void initializeDateInput(){
@@ -105,4 +126,16 @@ public class Activity2 extends AppCompatActivity {
 
         dateInput.setText(sdf.format(myCalendar.getTime()));
     }
+
+
+
+
+
+
+
+
+
+
+
+
 }
